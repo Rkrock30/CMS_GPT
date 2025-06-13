@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "934b82e6-d80b-4814-bbb9-c96541719258",
+		"name": "CMS-GPT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40011903"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"password123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate SEO Metadata",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODRiZmQ2MDk5ODdkYzczMWEwZjQyZjgiLCJpYXQiOjE3NDk4MTA1NTAsImV4cCI6MTc1MDQxNTM1MH0.Zbp4VJdnX3JtOz5tMllG5NWaFy49WZGlMdvPC1Xh1_A"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pages/684c07d5158a6a3b7aaf6013/seo/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pages",
+						"684c07d5158a6a3b7aaf6013",
+						"seo",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk Update Pages",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODRiZmQ2MDk5ODdkYzczMWEwZjQyZjgiLCJpYXQiOjE3NDk4MTA1NTAsImV4cCI6MTc1MDQxNTM1MH0.Zbp4VJdnX3JtOz5tMllG5NWaFy49WZGlMdvPC1Xh1_A"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"pageIds\": [\n    \"684c07d5158a6a3b7aaf6013\",\n    \"684c0cb8158a6a3b7aaf6016\"\n  ],\n  \"prompt\": \"Rewrite in friendly tone and improve SEO.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pages/bulk-update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pages",
+						"bulk-update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
